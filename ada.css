@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,500&display=swap');
+*{
+    padding: 0px;
+    margin: 0px;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+}
+h1, h2, h3, h4{
+    font-weight: 500;
+}
+        /*CABECERA*/
+.cabecera{
+    text-align: center;
+    padding: 100px 20px;
+    background-image: url(imagen1.jpg);
+    color: rgb(217, 235, 243);
+    background-size: cover;
+    background-position: center;
+
+}
+.cabecera > h1{
+    font-size: 2.5em;
+    border-top: 1px solid rgb(217, 235, 243);
+    width: 250px;
+    margin: 20px auto 0px;
+}
+.adicion{
+    display: none;  /*estamos haciendo desaparecer el parafo para despues volver a aparecer*/
+}
+    /**CONTENIDO PRINCIPAL*/
+    .principal{
+        padding: 20px;
+        color: gray;
+    }
+    .principal article{
+        margin-bottom: 20px;
+    }
+    .principal img{
+        width: 100%;
+    }
+    .principal header{
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .principal h2{
+        font-size: 2em;
+        color: black;
+    }
+    .principal p{
+        padding: 20px 0px;
+    }
+    /*punto de ruptura - 533(moviles)*/
+@media(min-width: 533px) {
+    /*cabecera 533px*/
+    .cabecera{
+        padding: 150px 50px;
+    }
+    .cabecera p{
+        font-size: 1.5em;
+    }
+    .cabecera h1{
+        font-size: 3em;
+        width: 300px;
+        margin: 30px auto 0px;
+    }
+    p.adicion{
+        display: block;
+        font-size: 0.8em;
+    }
+    /*contenido principal 533*/
+    .principal {
+        display: flex;
+        flex-wrap: wrap;
+
+    }
+    .principal article{
+        flex: 1 0 300px;
+        padding: 40px;
+    }
+    
+}
+    /*punto de ruptura de 1024px*/
+@media(min-width: 1024px){
+    /*cabecera 1024*/
+    .cabecera{
+        padding: 200px;
+    }
+    .cabecera p{
+        font-size: 1.8em;
+    }
+    .cabecera h1{
+        font-size: 4.5em;
+        width: 450px;
+    }
+    p.adicion{
+        font-size: 1em;
+    }
+    /*CONTENIDO PRINCIPAL*/
+    .principal article{
+        flex: 1 0 400px;
+    }
+    .principal p{
+        text-align: justify;
+    }
+}
